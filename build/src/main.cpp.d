@@ -1,3 +1,5 @@
-build/src/main.cpp.o: src/main.cpp src/miniaudio.h src/utils.h
-src/miniaudio.h:
+build/src/main.cpp.o: src/main.cpp src/utils.h src/sound.h \
+ src/miniaudio.h
 src/utils.h:
+src/sound.h:
+src/miniaudio.h:
