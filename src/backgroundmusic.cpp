@@ -5,7 +5,7 @@
 backgroundMusic::backgroundMusic() : N(static_cast<int>(mSounds.size())),
                                      currentSong(-1)
 {
-    const std::vector<std::string> musicfiles = {"ff-16b-2c-44100hz.mp3", "test.wav"};
+    const std::vector<std::string> musicfiles = {"test.wav", "ff-16b-2c-44100hz.mp3"};
     mSounds.resize(musicfiles.size());
 
     for (size_t i = 0; i < musicfiles.size(); ++i)

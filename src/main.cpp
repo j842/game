@@ -16,6 +16,7 @@ int main()
     try
     {
         con()->title();
+        con()->addToTicker("Spider Attack!");
 
         backgroundMusic bgm;
 
@@ -31,6 +32,7 @@ int main()
                     break;
             }
             bgm.tick();
+            con()->tick();
         }
     }
     catch (const std::exception &e)
