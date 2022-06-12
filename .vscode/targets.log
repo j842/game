@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 12 16:17:04 2022
+# Make data base, printed on Sun Jun 12 16:41:43 2022
 
 # Variables
 
@@ -28,6 +28,8 @@ VSCODE_HANDLES_SIGPIPE = true
 @D = $(patsubst %/,%,$(dir $@))
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# makefile (from 'makefile', line 24)
+INC_FLAGS := -Isrc
 # default
 .VARIABLES := 
 # environment
@@ -49,7 +51,9 @@ LANG = C
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # makefile
-MAKEFLAGS = pqrR
+MAKEFLAGS = pqrR -l24
+# makefile (from 'makefile', line 10)
+NO_COLOR := \033[m
 # makefile
 CURDIR := /home/j/code/game
 # environment
@@ -58,10 +62,12 @@ VSCODE_PIPE_LOGGING = true
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from 'makefile', line 17)
+SRCS := src/utils.cpp src/main.cpp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-MFLAGS = -pqrR
+MFLAGS = -pqrR -l24
 # default
 .SHELLFLAGS := -c
 # environment
@@ -84,12 +90,16 @@ VSCODE_VERBOSE_LOGGING = true
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'makefile', line 18)
+OBJS := build/src/utils.cpp.o build/src/main.cpp.o
 # makefile
 SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
+# makefile (from 'makefile', line 16)
+SRC_DIRS := src
 # environment
 MAKELEVEL := 0
 # default
@@ -100,6 +110,8 @@ PATH = /home/j/.vscode-server/bin/4af164ea3a06f701fe3e89a2bcbb421d2026b68f/bin/r
 MAKEFILES := 
 # automatic
 ^F = $(notdir $^)
+# makefile (from 'makefile', line 28)
+LDLIBS := 
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -114,12 +126,16 @@ HOSTTYPE = x86_64
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # automatic
 +F = $(notdir $+)
+# makefile (from 'makefile', line 12)
+ROOT_DIR := /home/j/code/game
 # environment
 WSL_INTEROP = /run/WSL/27561_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = j
+# makefile (from 'makefile', line 25)
+CPPFLAGS := -Isrc -MMD -MP
 # environment
 VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/j/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # makefile
@@ -130,8 +146,16 @@ DISPLAY = :0
 USER = j
 # default
 MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# makefile (from 'makefile', line 27)
+LDFLAGS := -g
+# makefile (from 'makefile', line 3)
+EXE_NAME := game
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# makefile (from 'makefile', line 7)
+LIN_COLOR := \033[0;33m
 # environment
 _ = /mnt/c/Users/j/AppData/Local/Programs/Microsoft VS Code/bin/code
 # environment
@@ -140,22 +164,42 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-4efd1407-1fcd-42b5-b3f3-a18068832bcb.sock
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from 'makefile', line 15)
+BUILD_DIR := build
 # environment
 HOME = /home/j
 # environment
 TERM = xterm-256color
+# makefile (from 'makefile', line 6)
+CRE_COLOR := \033[0;35m
+# makefile (from 'makefile', line 20)
+INC_DIRS := src
 # default
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
+# makefile (from 'makefile', line 19)
+DEPS := build/src/utils.cpp.d build/src/main.cpp.d
 # default
 SUFFIXES := 
+# makefile (from 'makefile', line 23)
+LD = g++
+# makefile (from 'makefile', line 8)
+OBJ_COLOR := \033[0;36m
 # environment
 WSL_DISTRO_NAME = Ubuntu-22.04
+# makefile (from 'makefile', line 26)
+CXXFLAGS := -g -Wall -std=c++17 
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'makefile', line 22)
+CXX = g++
+# makefile (from 'makefile', line 5)
+COM_COLOR := \033[0;34m
+# makefile (from 'makefile', line 9)
+VER_COLOR := \033[0;92m
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=2/101=2%
+# Load=93/1024=9%, Rehash=0, Collisions=10/151=7%
 
 # Pattern-specific Variable Values
 
@@ -163,22 +207,49 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 
 # Directories
 
-# . (device 2080, inode 47833): 15 files, no impossibilities.
+# . (device 2080, inode 47833): 10 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+build/%.cpp.o: %.cpp
+#  recipe to execute (from 'makefile', line 38):
+	@printf "%b" "$(COM_COLOR)Compiling $(OBJ_COLOR)$(@)$(NO_COLOR)\n";
+	@mkdir -p $(dir $@)
+	@$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
+# 1 implicit rules, 0 (0.0%) terminal.
 # Files
 
-game: main.cpp
+game: build/src/utils.cpp.o build/src/main.cpp.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 2):
-	g++ main.cpp -o game
+#  recipe to execute (from 'makefile', line 32):
+	@printf "%b" "$(LIN_COLOR)Linking   $(OBJ_COLOR)$(@)$(NO_COLOR)\n";
+	@$(CXX) $(OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
+	@echo 
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 44):
+	rm -rf $(BUILD_DIR)
+
+# Not a target:
+build/src/main.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/src/utils.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -194,32 +265,31 @@ all:
 #  File has not been updated.
 
 # Not a target:
-main.cpp:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-12 16:41:29.152519946
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-12 16:16:53.342500664
-#  File has been updated.
-#  Successfully updated.
-
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
+# Load=9/1024=1%, Rehash=0, Collisions=0/23=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 185 B / avg = 9 B
-# current buf: size = 8162 B / used = 185 B / count = 20 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 190 B / avg = 9 B
+# current buf: size = 8162 B / used = 190 B / count = 21 / avg = 9 B
 
-# strcache performance: lookups = 27 / hit rate = 25%
+# strcache performance: lookups = 30 / hit rate = 30%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Sun Jun 12 16:17:04 2022
+# Load=21/8192=0%, Rehash=0, Collisions=0/30=0%
+# Finished Make data base on Sun Jun 12 16:41:43 2022
 
  
