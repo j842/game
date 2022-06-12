@@ -28,8 +28,15 @@ int main()
         {
             if ((ch = getch()) != ERR) // keypress
             {
-                if (ch == 'q' || ch == 27)
-                    break;
+                switch (ch)
+                {
+                    case 'q':
+                    case 27:
+                        goto exitspiderattack;
+
+                    case KEY_RESIZE:
+                        con()->resize();
+                }
             }
             bgm.tick();
             con()->tick();
@@ -41,6 +48,8 @@ int main()
         std::cerr << e.what() << std::endl;
     }
 
+
+exitspiderattack:
     con()->endCon();
     std::cout<< std::endl << "Goodbye!" << std::endl;
 }

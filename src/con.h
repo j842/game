@@ -12,6 +12,10 @@ class Ticker
         void init(int width);
         void add(std::string s);
         const char * advance_and_get();
+        void resize(int newwidth);
+
+    private:
+        void _transferchar();
 
     private:
         std::string mDisplay;
@@ -29,12 +33,10 @@ public:
 
     void errormsg(std::string s);
     void title();
-
     void endCon();
-
     void addToTicker(std::string s);
-
     void tick();
+    void resize();
 
 private:
     bool HasEnded;
