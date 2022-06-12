@@ -6,7 +6,10 @@
 class sound
 {
     public:
+        sound();
         sound(std::string fname);
+        
+        void init(std::string fname);
         void play();
         void stop();
         bool isPlaying();

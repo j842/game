@@ -25,12 +25,13 @@ INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 CPPFLAGS := $(INC_FLAGS) -MMD -MP
 CXXFLAGS := -g -Wall -std=c++17 
 LDFLAGS  := -g
-LDLIBS   := 
+LDLIBS   := -l:libncurses.a -l:libtinfo.a
 
 
 $(EXE_NAME): $(OBJS) 
 	@printf "%b" "$(LIN_COLOR)Linking   $(OBJ_COLOR)$(@)$(NO_COLOR)\n";
 	@$(CXX) $(OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
+	@rm -f null.d
 	@echo 
 
 # Build step for C++ source

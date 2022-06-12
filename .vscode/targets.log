@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 12 16:41:43 2022
+# Make data base, printed on Sun Jun 12 19:35:21 2022
 
 # Variables
 
@@ -63,7 +63,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # makefile (from 'makefile', line 17)
-SRCS := src/utils.cpp src/main.cpp
+SRCS := src/sound.cpp src/utils.cpp src/main.cpp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -91,7 +91,7 @@ VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # makefile (from 'makefile', line 18)
-OBJS := build/src/utils.cpp.o build/src/main.cpp.o
+OBJS := build/src/sound.cpp.o build/src/utils.cpp.o build/src/main.cpp.o
 # makefile
 SHELL = /bin/sh
 # default
@@ -111,7 +111,7 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # makefile (from 'makefile', line 28)
-LDLIBS := 
+LDLIBS := -l:libncurses.a -l:libtinfo.a
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -161,7 +161,7 @@ _ = /mnt/c/Users/j/AppData/Local/Programs/Microsoft VS Code/bin/code
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-4efd1407-1fcd-42b5-b3f3-a18068832bcb.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-fa6172d2-ae92-4fa2-bf7f-e9ad1a34b53c.sock
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # makefile (from 'makefile', line 15)
@@ -179,7 +179,7 @@ INC_DIRS := src
 # automatic
 <F = $(notdir $<)
 # makefile (from 'makefile', line 19)
-DEPS := build/src/utils.cpp.d build/src/main.cpp.d
+DEPS := build/src/sound.cpp.d build/src/utils.cpp.d build/src/main.cpp.d
 # default
 SUFFIXES := 
 # makefile (from 'makefile', line 23)
@@ -214,7 +214,7 @@ VER_COLOR := \033[0;92m
 # Implicit Rules
 
 build/%.cpp.o: %.cpp
-#  recipe to execute (from 'makefile', line 38):
+#  recipe to execute (from 'makefile', line 39):
 	@printf "%b" "$(COM_COLOR)Compiling $(OBJ_COLOR)$(@)$(NO_COLOR)\n";
 	@mkdir -p $(dir $@)
 	@$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
@@ -222,13 +222,14 @@ build/%.cpp.o: %.cpp
 # 1 implicit rules, 0 (0.0%) terminal.
 # Files
 
-game: build/src/utils.cpp.o build/src/main.cpp.o
+game: build/src/sound.cpp.o build/src/utils.cpp.o build/src/main.cpp.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 32):
 	@printf "%b" "$(LIN_COLOR)Linking   $(OBJ_COLOR)$(@)$(NO_COLOR)\n";
 	@$(CXX) $(OBJS) -o $@ $(LDFLAGS) $(LDLIBS)
+	@rm -f null.d
 	@echo 
 
 clean:
@@ -236,7 +237,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 44):
+#  recipe to execute (from 'makefile', line 45):
 	rm -rf $(BUILD_DIR)
 
 # Not a target:
@@ -267,9 +268,15 @@ all:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-12 16:41:29.152519946
+#  Last modified 2022-06-12 19:35:05.932656045
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+build/src/sound.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 .PHONY: clean
 #  Implicit rule search has not been done.
@@ -277,19 +284,19 @@ makefile:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=0/23=0%
+# Load=10/1024=1%, Rehash=0, Collisions=0/25=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 190 B / avg = 9 B
-# current buf: size = 8162 B / used = 190 B / count = 21 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 212 B / avg = 9 B
+# current buf: size = 8162 B / used = 212 B / count = 22 / avg = 9 B
 
-# strcache performance: lookups = 30 / hit rate = 30%
+# strcache performance: lookups = 31 / hit rate = 29%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=0/30=0%
-# Finished Make data base on Sun Jun 12 16:41:43 2022
+# Load=22/8192=0%, Rehash=0, Collisions=0/31=0%
+# Finished Make data base on Sun Jun 12 19:35:21 2022
 
  

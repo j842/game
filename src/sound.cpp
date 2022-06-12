@@ -20,7 +20,7 @@ ma_engine * getEngine()
         if (result != MA_SUCCESS)
         {
             std::cerr << "Error starting sound engine! " << result << std::endl;
-            exit(result); // Failed to initialize the engine.
+            exit(-1);
         }
     }
 
@@ -28,10 +28,13 @@ ma_engine * getEngine()
 }
 
 
-sound::sound(std::string fname)
+sound::sound() : mResult(MA_DEVICE_NOT_INITIALIZED)
 {
-    std::string path = getExePath() + "sounds/" + fname;
-    mResult = ma_sound_init_from_file(getEngine(), path.c_str(), 0, NULL, NULL, &mSound);
+}
+
+sound::sound(std::string fname) : mResult(MA_DEVICE_NOT_INITIALIZED)
+{
+    init(fname);
 }
 
 void sound::play()
@@ -52,4 +55,9 @@ bool sound::okay() { return MA_SUCCESS == mResult; }
 void initEngine(ma_engine &engine)
 {
 
+}
+
+void sound::init(std::string fname) {
+    std::string path = getExePath() + "sounds/" + fname;
+    mResult = ma_sound_init_from_file(getEngine(), path.c_str(), 0, NULL, NULL, &mSound);
 }
